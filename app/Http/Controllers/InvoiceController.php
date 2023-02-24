@@ -32,8 +32,8 @@ class InvoiceController extends Controller
   public function pdf_print(Request $request, $invoice)
   {
 
-          return $invoice = Invoice::where('id','=',$invoice)->first();
-          //return view('invoice.pdf',compact('invoice'));
+          $invoice = Invoice::where('id','=',$invoice)->first();
+          return view('invoice.pdf',compact('invoice'));
       
 
    }
